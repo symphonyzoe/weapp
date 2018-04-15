@@ -1,0 +1,51 @@
+/* pages/p3/p3.wxss */
+.oList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.oddItem {
+  background: #ffffff;
+  font-size: 45rpx;
+  text-align: center;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.evenItem {
+  background: #d1f6ff;
+  font-size: 45rpx;
+  text-align: center;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 15pt;
+  padding:20rpx 0 10rpx 0;
+}
+
+.searchsec {
+  display:flex;
+  flex-direction: row;
+  margin: 40rpx 50rpx 40rpx 50rpx;
+  font-size: 10pt;
+  padding: 10rpx 3rpx 10rpx 3rpx;
+}
+
+.srcicon {
+  margin:10rpx 20rpx 0 0;
+}
+
+.src-btn-area {
+  display: flex ;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:20rpx 20rpx 20rpx 20rpx;
+  font-size: 10pt;
+  line-height: 10rpx;
+}

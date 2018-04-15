@@ -1,0 +1,14 @@
+/* pages/p2/p2.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.box {
+  margin-top: -140rpx;
+  margin-left:40rpx;
+}
+
+.ticket {
+  margin-top: 600rpx;
+}

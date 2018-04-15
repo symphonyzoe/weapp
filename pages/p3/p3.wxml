@@ -1,0 +1,37 @@
+<!--pages/p3/p3.wxml-->
+<view wx:if='{{mode==0}}' class='searchsec' style='border:2px solid #f1f1f1; border-radius: 10px'>
+  <icon class='srcicon'type='search' size='20'/>
+  <input class='srcbox' maxlength='20' placeholder='输入搜索内容'  confirm-type='search' value='{{srcTx}}' bindconfirm='searchMap' />
+  <!--image src='../index/img/rArrow.png' style='width:20px; height:20px;' mode='aspectfit' bindtap='searchMap'></image-->
+</view>
+<view wx:if='{{mode==0}}' class='src-btn-area'>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='火锅' >火锅</button>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='烧烤'>烧烤</button>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='川菜'>川菜</button>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='粤菜'>粤菜</button>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='西餐'>西餐</button>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='日本料理'>日本料理</button>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='快餐'>快餐</button>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='饮料'>饮料</button>
+  <button style="color: white; background-color: #aaaaaa; border:1px none #aaaaaa; border-radius: 20px; margin: 10rpx 10rpx 10rpx 0" size='5' bindtap='searchMap' data-txt='甜品'>甜品</button>
+</view>
+<form class='form' bindsubmit="formSubmit" bindreset="formReset">
+  <block class='oList' wx:key='*this' wx:for='{{selections}}' >
+    <view wx:if='{{index%2==0}}' bindlongpress='testrpx'>
+      <view class='oddItem'>{{item}}</view>
+    </view>
+    <view wx:else bindlongpress='testrpx'>
+      <view class='evenItem'>{{item}}</view>
+    </view>
+  </block>
+  <view>
+  </view>  
+  <view class="section">
+    <button formType="submit">添加选项</button>
+    <button formType="reset">清空列表</button>
+    <button wx:if='{{mode==1}}' bindtap='truereset'>重置列表</button>
+    <!--view class="section__title">input</view-->
+    <input style='border-style:solid none solid none; border-width:1px; border-color:#e1e1e1; width:2000rpx;margin:10rpx 0 0 0;' name="input" placeholder="输入候选" focus='{{iffocus}}' maxlength='20' value='{{inputTx}}'/>
+  </view>
+
+</form> 

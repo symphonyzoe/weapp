@@ -1,0 +1,29 @@
+<!--pages/p2/p2.wxml-->
+<view class='container'>
+  <!--view wx:key='*this' class='names' wx:for="{{selections}}" font-size='10px'>
+    {{index}}:{{item}}<br></br>
+  </view>
+  <!--canvas canvas-id='myC1' style="border: 1px solid; height: 260px"> 
+    <!--view wx:key='*this' wx:for="{{selections}}">
+      {{selections.lenth}}:{{item}}
+    </view>
+  </canvas-->
+
+
+  <button bindtap='reReqMapData'>重新定位</button>
+  <view class='title'>{{current}}</view>
+  <view animation="{{animationData2}}" class='ticket' bindtap='removeTicket' bindlongpress='editOptions'>
+    <image style="width:20px; height:20px;" mode="aspectFit" src="../index/img/ticket.png"></image>
+    <view>
+      {{selections[i]}}
+    </view>
+  </view>
+  
+  <view animation="{{animationData}}" class='box' >
+    <image class="" style="width:100px; height:100px;" mode="aspectFit" bindtap="shake2Toll" src="../index/img/box.png"></image>
+    <!--view wx:key='*this' class='names' wx:for="{{selections}}" >
+     {{item}}
+    </view-->
+  </view>
+
+</view>
