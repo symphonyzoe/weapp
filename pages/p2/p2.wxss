@@ -1,4 +1,7 @@
 /* pages/p2/p2.wxss */
+page{
+  background:#f7f4eb;
+}
 .container {
   display: flex;
   flex-direction: column;

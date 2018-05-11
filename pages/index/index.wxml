@@ -1,15 +1,11 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <image class="nxt_l" style="width:75px; height:75px;" mode="aspectFit" bindtap="bind2" src="../index/img/dlvery.png"></image>
-      <image class="nxt_r" style="width:75px; height:75px;" mode="aspectFit" bindtap="bind3" src="../index/img/restrt.png"></image>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+    <image class='bg' src='../index/img/indexs.jpg' style='width:{{w}}px; height:{{h}}px' mode='aspectFill'/>
+    <view class="menuarea" style='margin-top:-{{h-100}}px'>
+        <image id="lbtn" style="width:270px; height:90px; margin-top:{{h/2-100}}px; margin-left:5px" mode="aspectFit" bindtap="jumpP1" src="{{deliurl}}"></image>
+        <image id="rbtn" style="width:270px; height:90px; margin-top:20px; margin-left:{{w-270}}px" mode="aspectFit" bindtap="jumpP2" src="{{resturl}}"></image>
+      <!--/block-->
+    </view>
+
+
 </view>

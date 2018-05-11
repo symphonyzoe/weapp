@@ -1,30 +1,25 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction:column;
-  align-items: center;
+page{
+  background:#f7f4eb;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
+.container{
+  background: #f7f4eb;
+  padding: 0rpx;
 }
 
 .nxt_l {
-  margin-top: 50px;
-  margin-right: 150px;
+  margin-top: 0px;
+
 }
 .nxt_r {
-  margin-top: -75px;
-  margin-left: 150px;
+  margin-top: 0px;
+
 }
 
 .usermotto {
-  margin-top: 80px;
+  margin-top: 0px;
 }
+

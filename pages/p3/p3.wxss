@@ -1,4 +1,54 @@
 /* pages/p3/p3.wxss */
+button::after{
+  border: none;
+}
+page{
+  background:#eeeef3;
+  padding-top: 0;
+}
+
+.searcharea{
+  background: #f7f4eb;
+  padding: 20px 0 20px 0;
+}
+
+.searchsec {
+  background: #ffffff;
+  display:flex;
+  flex-direction: row;
+  margin: 20px 50px 10px 50px;
+  font-size: 13pt;
+  border:10px solid #ffffff;
+  border-radius: 10px;
+}
+
+.srcicon {
+  margin:6px 5px 0px 0px;
+}
+.srcbox {
+  padding:3px;
+}
+.src-btn-area {
+  display: flex ;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 20px 10px 20px;
+}
+
+.src-btn-area > button{
+  color: black; 
+  font-size: 11pt;
+  background-color: #ffffff; 
+  border:1px solid #ffffff;
+  border-radius: 20px; 
+  margin: 7px 5px 0 5px;
+}
+
+form {
+  background-color: #eeeef3;
+  padding:10px 0 0 0;
+}
+
 .oList {
   display: flex;
   flex-direction: column;
@@ -7,45 +57,33 @@
 
 .oddItem {
   background: #ffffff;
-  font-size: 45rpx;
-  text-align: center;
-  margin-left: 40rpx;
-  margin-right: 40rpx;
-}
-
-.evenItem {
-  background: #d1f6ff;
-  font-size: 45rpx;
-  text-align: center;
-  margin-left: 40rpx;
-  margin-right: 40rpx;
+  font-size: 15pt;
+  text-align: left;
+  text-indent: 20px;
+  border-bottom: 1px solid #eeeef3;
+  padding:10px 0 10px 0;
 }
 
 .section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.add {
+  position: fixed;
+  right: 30px;
+  bottom: 85px;
+  height: 60px;
+  width: 60px;
+}
+.section > input {
+  background: #ffffff;
   font-size: 15pt;
-  padding:20rpx 0 10rpx 0;
+  text-align: left;
+  width: 500px;
+  border-bottom: 1px solid #eeeef3;
+  padding:10px 0 10px 20px;
 }
 
-.searchsec {
-  display:flex;
-  flex-direction: row;
-  margin: 40rpx 50rpx 40rpx 50rpx;
-  font-size: 10pt;
-  padding: 10rpx 3rpx 10rpx 3rpx;
-}
 
-.srcicon {
-  margin:10rpx 20rpx 0 0;
-}
-
-.src-btn-area {
-  display: flex ;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin:20rpx 20rpx 20rpx 20rpx;
-  font-size: 10pt;
-  line-height: 10rpx;
-}

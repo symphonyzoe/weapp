@@ -7,59 +7,50 @@ Page({
     motto: '吃啥？',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    w:0,
+    h:0,
+    animationData: {},
+    deliurl: "../index/img/dlvery_ori.png",
+    resturl: "../index/img/restrt_ori.png",
   },
   //事件处理函数
-  bindViewTap: function() {
+
+  jumpP1: function() {
+    
+    this.setData({
+      deliurl: "../index/img/dlvery_tchd.png",
+    });
     wx.navigateTo({
-      url: '../logs/logs'
-    })
+      url: '../p1/p1',
+    });
+    
   },
-  bind2: function() {
-    wx.navigateTo({
-      url: '../p1/p1'
-    })
-  },
-  bind3:function(){
+  jumpP2:function(){
+    this.setData({
+      resturl: "../index/img/restrt_tchd.png",
+    });
     wx.navigateTo({
       url: '../p2/p2',
-    })
+    });
   },
 
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    var that = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        that.setData({
+          w: res.windowWidth,
+          h: res.windowHeight,
+        });
+      },
+    });
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+
+  onShow: function(){
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+      deliurl: "../index/img/dlvery_ori.png",
+      resturl: "../index/img/restrt_ori.png",
+    });
+  },
 })

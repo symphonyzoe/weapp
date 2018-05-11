@@ -1,5 +1,9 @@
 /* pages/p1/p1.wxss */
+page{
+  background:#f7f4eb;
+}
 .container{
+  background: #f7f5eb;
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
