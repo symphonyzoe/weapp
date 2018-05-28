@@ -1,0 +1,20 @@
+/* pages/p1/p1.wxss */
+page{
+  background:#f7f4eb;
+}
+.container{
+  background: #f7f5eb;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.bike{
+  margin:-200rpx 0 50rpx 100rpx;
+}
+.bowl{
+  margin:-120rpx 0 0 100rpx;
+}
+.result{
+  margin:400rpx 0 0 0;
+  font-size: 20pt;
+}

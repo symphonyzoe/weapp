@@ -1,0 +1,35 @@
+<!--pages/p3/p3.wxml-->
+<view class="searcharea">
+  <view wx:if='{{mode==0}}' class='searchsec'>
+    <icon class='srcicon' type='search' size='20'/>
+    <input class='srcbox' maxlength='20' placeholder="吃哪种呢？"  confirm-type='search' value='{{srcTx}}' bindconfirm='searchMap' bindfocus='ontip'/>
+  </view>
+  <view wx:else class="dlvtip">添加自己喜欢的外卖吧</view>
+  <view wx:if='{{mode==0&&tip==1}}' class='src-btn-area'>
+    <view style="color: #000000; font-size: 10pt; margin: 0px {{w-200}}px 0px 20px;">不知道吃啥？试试这些</view>
+    <button size='mini' bindtap='searchMap' data-txt='火锅'>火锅</button>
+    <button size='mini' bindtap='searchMap' data-txt='烧烤'>烧烤</button>
+    <button size='mini' bindtap='searchMap' data-txt='川菜'>川菜</button>
+    <button size='mini' bindtap='searchMap' data-txt='粤菜'>粤菜</button>
+    <button size='mini' bindtap='searchMap' data-txt='西餐'>西餐</button>
+    <button size='mini' bindtap='searchMap' data-txt='日本料理'>日本料理</button>
+    <button size='mini' bindtap='searchMap' data-txt='快餐'>快餐</button>
+    <button size='mini' bindtap='searchMap' data-txt='饮料'>饮料</button>
+    <button size='mini' bindtap='searchMap' data-txt='甜品'>甜品</button>
+    <canvas style="width:{{w}}px;height:{{h-285}}px;" canvas-id='bgmask' bindtap="offtip"></canvas>
+  </view>
+</view>
+<form wx:if="{{tip==0}}" class="form" bindsubmit="formSubmit" bindreset="formReset" >
+  <view style="font-size: 12pt; color: #888888; text-align: left;text-indent: 20px; padding:3px 3px;">{{!mode?"结果列表":"选项列表"}}</view>
+  <block class='oList' wx:key='*this' wx:for='{{selections}}' >
+    <view bindlongpress='testrpx'>
+      <view class='oddItem'>{{item}}</view>
+    </view>
+  </block>
+  <view class="section">
+    <input wx:if="{{ifinput}}" name="input" placeholder="输入候选" focus='{{iffocus}}' maxlength='20' value='{{inputTx}}' bindconfirm="formSubmit"/>
+    <button wx:if='{{mode==1}}' bindtap='truereset'>重置列表</button>
+    <!--view class="section__title">input</view-->
+  </view>
+  <image class="add" src="../index/img/add.png" mode="aspectFit" bindtap="addfn"/>
+</form> 
