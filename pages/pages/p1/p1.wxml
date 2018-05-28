@@ -1,0 +1,15 @@
+<!--pages/p1/p1.wxml-->
+<view class='container'>
+
+  <!--button bindtap='editOptions'>jump</button-->
+  <view animation='{{animationData3}}' class='result' bindlongpress='editOptions'>
+    {{selections[i]}}
+  </view>
+  <view animation='{{animationData2}}' class='bowl'>
+    <image src='../index/img/饭碗.png' style='width:70px; height:70px' mode='aspectFit' bindtap='slipaway'></image>
+  </view>
+  <view animation='{{animationData}}' class='bike'>
+    <image src='../index/img/外卖.png' style='width:100px; height:100px' mode='aspectFit' bindtap='randomC'></image>
+  </view>
+
+</view>

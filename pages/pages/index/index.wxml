@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+    <image class='bg' src='../index/img/indexs.jpg' style='width:{{w}}px; height:{{h}}px' mode='aspectFill'/>
+    <view class="menuarea" style='margin-top:-{{h-100}}px'>
+        <image id="lbtn" style="width:270px; height:90px; margin-top:{{h/2-100}}px; margin-left:5px" mode="aspectFit" bindtap="jumpP1" src="{{deliurl}}"></image>
+        <image id="rbtn" style="width:270px; height:90px; margin-top:20px; margin-left:{{w-270}}px" mode="aspectFit" bindtap="jumpP2" src="{{resturl}}"></image>
+      <!--/block-->
+    </view>
+
+
+</view>
